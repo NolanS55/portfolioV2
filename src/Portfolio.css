@@ -400,10 +400,19 @@ html, body {
     text-transform: uppercase;
   }
 
-  .tag.pink { background-color: #ff4fcf; }
-  .tag.green { background-color: #a4ff4f; color: #000; }
-  .tag.orange { background-color: #ff8126; }
-  .tag.cyan { background-color: #21f3eb; color: #000; }
+  .tag.expressjs { background-color: #3ABF91; }
+.tag.nodejs { background-color: #6DC75D; }
+.tag.java { background-color: #FF6B6B; }
+.tag.androidstudio { background-color: #76D67F; }
+.tag.python { background-color: #f5da12; }
+.tag.flask { background-color: #9B66D8; }
+.tag.react { background-color: #4AB6D8; }
+.tag.numpy { background-color: #FF9C5A; }
+.tag.aialgorithms { background-color: #B59EFF; }
+.tag.adonisjs { background-color: #C27EFF; }
+.tag.mongodb { background-color: #4ACF77; }
+.tag.opencv { background-color: #FF68B8; }
+.tag.ai { background-color: #B0A9FF; }
 
   .description {
     margin-bottom: 1.5rem;

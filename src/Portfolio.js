@@ -9,6 +9,8 @@ import oneScan from "./oneScan.png"
 import profile from "./profile.png"
 import ticket from "./ticketVortex.png"
 import { TypeAnimation } from 'react-type-animation';
+import {motion} from 'framer-motion'
+import { desc } from "framer-motion/client";
 
 const Portfolio = () => {
 
@@ -28,6 +30,35 @@ const Portfolio = () => {
     const [unSelected, setUnselected] = useState("#B0B0B0")
     const [titleSelected, setTitleSelected] = useState("➤ Full Stack Software Engineer Intern")
     const [titleUnselected, setTitleUnselected] = useState("▸ Web Developer")
+
+    const projects = [
+
+      {
+        title: "WalkMe",
+        image: image,
+        tags: ["ExpressJS", "NodeJS", "Java", "Android Studio"],
+        description: "A mobile fitness application designed to promote healthy habits by encouraging walking through personalized route suggestions and activity tracking. Built with Java for Android, the app connects to a custom Express.js API with MongoDB for user data management. It integrates the FatSecret API for nutrition tracking, allowing users to scan barcodes and log food items, while also connecting to OpenRouteService for AI-generated walking routes based on user location and desired distance. The app tracks calorie intake, walking progress, and provides dynamic route recommendations using OpenStreetMap for map rendering. Developed as a team project over the past month, with version control and collaboration managed through GitHub."
+      },
+      {
+        title: "Movie Genie",
+        image: movie,
+        tags: ["Python", "Flask", "React", "NumPy", "AI Algorithms"],
+        description: "An AI-powered web application with a React frontend and Flask backend, developed to deliver intelligent recommendations through collaborative filtering algorithms. The machine learning models were implemented using NumPy, Pandas, and scikit-learn to provide personalized user experiences. RESTful API endpoints were built to handle data processing and serve model predictions, while the responsive and intuitive UI ensured seamless user interaction. The project followed Agile methodologies, with SCRUM, and GitHub used to support effective collaboration and iterative development."
+      },
+      
+      {
+        title: "Seneca oneScan",
+        image: oneScan,
+        tags: ["AdonisJS", "MongoDB", "OpenCV", "AI"],
+        description: "A web application that allows users to register by uploading photos of themselves, then uses AI-powered facial recognition to identify whether a similar-looking student exists in a database of uploaded images. Built with AdonisJS and MongoDB, the platform handles user authentication, image uploads, and real-time facial comparison. The AI system uses facial recognition algorithms to analyze and match submitted photos against stored student images. The project was developed collaboratively and managed using GitHub for version control and team coordination."
+      },
+      {
+        title: "Ticket Vortex",
+        image: ticket,
+        tags: ["Python", "Flask", "MongoDB"],
+        description: "An online marketplace for concert tickets built by a team with a focus on creating a seamless and secure user experience. The platform features RESTful APIs developed using Python and Flask, with a backend architecture designed to support key marketplace operations. The database was structured using MongoDB, with a custom schema designed to efficiently manage users, ticket listings, and transactions. The frontend was built with HTML, CSS, and Bootstrap to provide a responsive and intuitive interface. My contributions included designing and implementing the backend APIs, structuring the MongoDB database, and developing parts of the user interface. The project was managed collaboratively using GitHub, JIRA, and SCRUM for version control and workflow organization."
+      }
+    ]
 
 
 
@@ -70,6 +101,10 @@ const Portfolio = () => {
         }
     }
 
+    const getDirection = (index) => {
+      return index % 2 === 0 ? -100 : 100;
+    };
+  
   return (
     <div className="portfolio-container">
       {/* Navbar */}
@@ -144,73 +179,30 @@ const Portfolio = () => {
       <div id="projects" className="project-wrapper">
         <h2 className="section-title">Projects</h2>
         <hr></hr>
-        <div class="project">
-          <div class="project-image" style={{backgroundImage: `url(${image})`}}></div>
-            <div class="project-content">
-              <h2>WalkMe</h2>
-                <div class="tags">
-                <span class="tag pink">ExpressJS</span>
-                <span class="tag green">NodeJS</span>
-                <span class="tag cyan">Java</span>
-                <span class="tag orange">Android Studio</span>
+        {projects.map((proj, index) => (
+        <motion.div
+          className="project"
+          key={index}
+          initial={{ x: getDirection(index), opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.2 }}
+        >
+          <div className="project-image" style={{ backgroundImage: `url(${proj.image})` }}></div>
+            <div className="project-content">
+              <h2>{proj.title}</h2>
+              <div className="tags">
+              {proj.tags.map((tag, i) => (
+                <span key={i} className={`tag ${tag.toLowerCase().replace(/[^a-z]/g, "")}`}>
+                  {tag}
+                </span>
+              ))}
             </div>
-            <p class="description">
-            A mobile fitness application designed to promote healthy habits by encouraging walking through personalized route suggestions and activity tracking. Built with Java for Android, the app connects to a custom Express.js API with MongoDB for user data management. It integrates the FatSecret API for nutrition tracking, allowing users to scan barcodes and log food items, while also connecting to OpenRouteService for AI-generated walking routes based on user location and desired distance. The app tracks calorie intake, walking progress, and provides dynamic route recommendations using OpenStreetMap for map rendering. Developed as a team project over the past month, with version control and collaboration managed through GitHub.
-            </p>
-            <button class="btn">See More</button>
+            <p className="description">{proj.description}</p>
+            <button className="btn">See More</button>
           </div>
-        </div>
-        <div class="project">
-          <div class="project-image" style={{backgroundImage: `url(${movie})`}}></div>
-            <div class="project-content">
-              <h2>Movie Genie</h2>
-                <div class="tags">
-                <span class="tag pink">Python</span>
-                <span class="tag green">Flask</span>
-                <span class="tag orange">React</span>
-                <span class="tag orange">NumPy</span>
-                <span class="tag cyan">AI Algorithms</span>
-                <span class="tag orange">HTML/CSS</span>
-            </div>
-            <p class="description">
-            An AI-powered web application with a React frontend and Flask backend, developed to deliver intelligent recommendations through collaborative filtering algorithms. The machine learning models were implemented using NumPy, Pandas, and scikit-learn to provide personalized user experiences. RESTful API endpoints were built to handle data processing and serve model predictions, while the responsive and intuitive UI ensured seamless user interaction. The project followed Agile methodologies, with SCRUM, and GitHub used to support effective collaboration and iterative development.
-            </p>
-            <button class="btn">See More</button>
-          </div>
-        </div>
-        <div class="project">
-          <div class="project-image" style={{backgroundImage: `url(${oneScan})`}}></div>
-            <div class="project-content">
-              <h2>Seneca oneScan</h2>
-                <div class="tags">
-                <span class="tag pink">AdonisJS</span>
-                <span class="tag cyan">MongoDB</span>
-                <span class="tag green">OpenCV</span>
-                <span class="tag cyan">AI</span>
-                <span class="tag orange">HTML/CSS</span>
-            </div>
-            <p class="description">
-            A web application that allows users to register by uploading photos of themselves, then uses AI-powered facial recognition to identify whether a similar-looking student exists in a database of uploaded images. Built with AdonisJS and MongoDB, the platform handles user authentication, image uploads, and real-time facial comparison. The AI system uses facial recognition algorithms to analyze and match submitted photos against stored student images. The project was developed collaboratively and managed using GitHub for version control and team coordination.
-            </p>
-            <button class="btn">See More</button>
-          </div>
-        </div>
-        <div class="project">
-          <div class="project-image" style={{backgroundImage: `url(${ticket})`}}></div>
-            <div class="project-content">
-              <h2>Ticket Vortex</h2>
-                <div class="tags">
-                <span class="tag pink">Python</span>
-                <span class="tag green">Flask</span>
-                <span class="tag cyan">MongoDB</span>
-                <span class="tag orange">HTML/CSS</span>
-            </div>
-            <p class="description">
-            An online marketplace for concert tickets built by a team with a focus on creating a seamless and secure user experience. The platform features RESTful APIs developed using Python and Flask, with a backend architecture designed to support key marketplace operations. The database was structured using MongoDB, with a custom schema designed to efficiently manage users, ticket listings, and transactions. The frontend was built with HTML, CSS, and Bootstrap to provide a responsive and intuitive interface. My contributions included designing and implementing the backend APIs, structuring the MongoDB database, and developing parts of the user interface. The project was managed collaboratively using GitHub, JIRA, and SCRUM for version control and workflow organization.
-            </p>
-            <button class="btn">See More</button>
-          </div>
-        </div>
+        </motion.div>
+        ))}
       </div>
       </section>
       <section id="about" className="about-section">
