@@ -24,7 +24,7 @@ const Portfolio = () => {
     const [fadeIn, setFadeIn] = useState(0);
     const [selected, setSelected] = useState("black");
     const [unSelected, setUnselected] = useState("#FFFFFF")
-    const [titleSelected, setTitleSelected] = useState("Full Stack Software Engineer Intern")
+    const [titleSelected, setTitleSelected] = useState("▶ Full Stack Software Engineer Intern")
     const [titleUnselected, setTitleUnselected] = useState("Web Developer")
 
     const jobChange = (job) => {
