@@ -20,6 +20,13 @@ html, body {
     font-size: 2.575rem;
     
   }
+
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    left: 1.5rem;
+  }
   
   .nav-link {
     color: white;
@@ -30,6 +37,8 @@ html, body {
   .nav-link:hover {
     color: #a916e7; /* Tailwind purple-400 */
   }
+
+  
   
   .hero-section {
     margin-top: 2rem;
@@ -97,57 +106,38 @@ html, body {
   .experience-section {
     padding-bottom: 0;
   }
-
+  
   .experience-role-header {
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    font-size: 3.25rem;
+    font-size: clamp(2rem, 4vw, 3.25rem);
     font-weight: 700;
     margin: 0;
     margin-top: 1rem;
   }
-
-  .experience-section .section-title {
-    padding: 0 2rem;
-  }
-
-  .experience-line-head {
-    margin-right: 50%;
-    width: 50%;
-    margin-left: 2rem;
-  }
   
   .section-title {
     text-align: left;
-    font-size: 3.875rem;
+    font-size: clamp(2.5rem, 5vw, 3.875rem);
     font-weight: 700;
-    margin-bottom: 0;
-    margin-top: 0;
+    margin: 0 0 0 0;
+    padding: 0 2rem;
   }
-
-
-  .experience-line {
+  
+  .experience-line-head {
+    margin-left: 2rem;
     width: 50%;
-    margin-right: 55%;
+    margin-right: auto;
   }
   
   .experience-wrapper {
     display: flex;
-    flex-direction: column;
-    margin-top: 3rem;
-    margin-bottom: 0;
-    opacity: 1;
-    transition: opacity 1s ease-in;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    flex-direction: row;
+    margin: 3rem 2rem 0 2rem;
+    gap: 2rem;
+    transition: flex-direction 0.3s ease;
   }
-  
-  @media (min-width: 768px) {
-    .experience-wrapper {
-      flex-direction: row;
-    }
-  }
-  
+
   .experience-role {
     text-align: left;
     background: linear-gradient(135deg, #8A2BE2 0%, #9400D3 100%);
@@ -156,10 +146,37 @@ html, body {
     border-bottom-left-radius: 0.375rem;
   }
   
+  @media (max-width: 1140px) {
+    .experience-wrapper {
+      flex-direction: column;
+    }
+  
+    .experience-role {
+      width: 100%;
+      border-radius: 0.375rem 0.375rem 0 0;
+    }
+  
+    .experience-details {
+      border-radius: 0 0 0.375rem 0.375rem;
+    }
+  
+    .experience-line-head,
+    .experience-line {
+      width: 80%;
+      margin: 0 auto;
+    }
+  
+    .experience-list {
+      max-width: 100%;
+    }
+  }
+  
+  
+  
   .experience-title {
     font-weight: 600;
-    font-size: 2rem;
-    padding: .5rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    padding: 0.5rem;
   }
   
   .fade-in {
@@ -176,18 +193,13 @@ html, body {
       transform: translateY(0);
     }
   }
-
+  
   .experience-details {
     flex: 1;
     background: linear-gradient(135deg, black 0%, rgb(32, 27, 27) 100%);
-    border-radius: 0.375rem;
     padding-left: 2rem;
   }
   
-  .experience-details.visible {
-    opacity: 1;
-  }
-
   .experience-header {
     display: flex;
     justify-content: space-between;
@@ -195,33 +207,36 @@ html, body {
   }
   
   .company-name {
-    font-size: 3.25rem;
+    font-size: clamp(2rem, 4vw, 3.25rem);
     font-weight: 700;
-    margin: 0;
-    margin-top: 1rem;
+    margin: 1rem 0 0 0;
   }
   
   .duration {
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 2vw, 1.25rem);
     margin-right: 1rem;
   }
   
   .position {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: 600;
-    margin-top: 0rem;
-    margin-bottom: 1rem;
+    margin: 0 0 1rem 0;
     text-align: left;
   }
   
+  .experience-line {
+    width: 50%;
+    margin-right: 55%;
+  }
+  
   .experience-list {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
     list-style-type: disc;
     padding-left: 1rem;
     text-align: left;
-    max-width: 75%;;
+    max-width: 75%;
   }
-
+  
   .experience-item {
     margin-bottom: 1rem;
   }
@@ -481,5 +496,46 @@ html, body {
     margin: 0;
     padding: 2rem;
     text-align: left;
+  }
+
+  @media (max-width: 1240px) {
+    .about-section {
+      padding: 0 1rem 2rem;
+    }
+
+    .about-image-container {
+      width: 45%; /* or use max-width or responsive units like vw */
+      height: auto;
+      justify-content: center;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 1rem;
+    }
+
+    .about {
+    width: 85%;
+    height: auto;
+    background: linear-gradient(135deg, black 0%, rgb(32, 27, 27) 100%);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    border: 5px solid; /* fallback */
+    border-image: linear-gradient(to right, #8A2BE2, #9400D3);
+    border-image-slice: 1;
+    border-radius: 5;
+    }
+
+    .profile-image {
+      width: 100%;
+      height: auto; /* maintains aspect ratio */
+    display: block; /* removes small space under image */
+    object-fit: cover; 
+    }
+    .about-title {
+      font-size: 1.5rem;
+    }
+    .about-description {
+      font-size: 0.75rem;
+    }
   }
 

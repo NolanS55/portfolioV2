@@ -12,6 +12,7 @@ import { TypeAnimation } from 'react-type-animation';
 
 const Portfolio = () => {
 
+  // State variables for work experience and projects
     const [company_name, setCompanyName] = useState("TECHCOM");
     const [title, setTitle] = useState("Full Stack Software Engineer Intern");
     const [duration, setDuration] = useState("May - August 2024");
@@ -27,6 +28,8 @@ const Portfolio = () => {
     const [unSelected, setUnselected] = useState("#FFFFFF")
     const [titleSelected, setTitleSelected] = useState("▶ Full Stack Software Engineer Intern")
     const [titleUnselected, setTitleUnselected] = useState("Web Developer")
+
+
 
     const jobChange = (job) => {
         if(job === "t") {      
