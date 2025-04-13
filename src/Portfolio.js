@@ -7,6 +7,7 @@ import image from "./sudoku.png"
 import movie from "./movie.png"
 import oneScan from "./oneScan.png"
 import profile from "./profile.png"
+import ticket from "./ticketVortex.png"
 import { TypeAnimation } from 'react-type-animation';
 
 const Portfolio = () => {
@@ -91,7 +92,6 @@ const Portfolio = () => {
       />
             </h1>
           <p className="hero-subtitle">
-            
             I am a passionate software engineer from Toronto, Canada
           </p>
         </div>
@@ -193,7 +193,7 @@ const Portfolio = () => {
           </div>
         </div>
         <div class="project">
-          <div class="project-image" style={{backgroundImage: `url(${image})`}}></div>
+          <div class="project-image" style={{backgroundImage: `url(${ticket})`}}></div>
             <div class="project-content">
               <h2>Ticket Vortex</h2>
                 <div class="tags">
