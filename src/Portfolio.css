@@ -163,7 +163,6 @@ html, body {
     .experience-line-head,
     .experience-line {
       width: 80%;
-      margin: 0 auto;
     }
   
     .experience-list {
@@ -427,6 +426,18 @@ html, body {
   .project h2 {
     font-size: 2.5rem;
   }
+
+  .project-wrapper hr {
+    margin: auto;
+    width:100%;
+    margin-top: 1rem;
+  }
+
+  .project-wrapper .section-title {
+    text-align: center;
+    margin-right: 2rem;
+  }
+
 
 
   .description {

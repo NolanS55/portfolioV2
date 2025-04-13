@@ -24,10 +24,10 @@ const Portfolio = () => {
     ])
     const [tags, setTags] = useState(["PHP", "JavaScript", "MySQL", "HTML/CSS", "Bash", "SCRUM"])
     const [fadeIn, setFadeIn] = useState(0);
-    const [selected, setSelected] = useState("black");
-    const [unSelected, setUnselected] = useState("#FFFFFF")
-    const [titleSelected, setTitleSelected] = useState("▶ Full Stack Software Engineer Intern")
-    const [titleUnselected, setTitleUnselected] = useState("Web Developer")
+    const [selected, setSelected] = useState("white");
+    const [unSelected, setUnselected] = useState("#B0B0B0")
+    const [titleSelected, setTitleSelected] = useState("➤ Full Stack Software Engineer Intern")
+    const [titleUnselected, setTitleUnselected] = useState("▸ Web Developer")
 
 
 
@@ -44,10 +44,10 @@ const Portfolio = () => {
             ])
             setTags(["PHP", "JavaScript", "MySQL", "HTML/CSS", "Bash", "SCRUM"])
             setFadeIn(prev => prev + 1);
-            setSelected("black")
-            setUnselected("white")
-            setTitleSelected("▶ Full Stack Software Engineer Intern")
-            setTitleUnselected("Web Developer") 
+            setSelected("white")
+            setUnselected("#B0B0B0")
+            setTitleSelected("➤ Full Stack Software Engineer Intern")
+            setTitleUnselected("▸ Web Developer") 
         }
         else {
 
@@ -62,11 +62,11 @@ const Portfolio = () => {
             ])
             setTags(["JavaScript", "HTML/CSS", "SEO Optimization", "WebFlow", "Figma"])
             setFadeIn(prev => prev + 1);
-            setSelected("white")
-            setUnselected("black")
+            setSelected("#B0B0B0")
+            setUnselected("white")
 
-            setTitleSelected("Full Stack Software Engineer Intern")
-            setTitleUnselected("▶ Web Developer") 
+            setTitleSelected("▸ Full Stack Software Engineer Intern")
+            setTitleUnselected("➤ Web Developer") 
         }
     }
 
