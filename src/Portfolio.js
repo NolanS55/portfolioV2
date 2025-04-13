@@ -157,7 +157,7 @@ const Portfolio = () => {
         <div class="tags">
           {tags.map((tag, index) => (
 
-            <span key={index} className={`tag ${tag.toLowerCase()}`}>{tag}</span>
+            <span key={index} className={`tag ${tag.toLowerCase().replace(/[^a-z]/g, "")}`}>{tag}</span>
           ))
           }
         </div>
