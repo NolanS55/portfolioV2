@@ -37,26 +37,30 @@ const Portfolio = () => {
         title: "WalkMe",
         image: walk,
         tags: ["ExpressJS", "NodeJS", "Java", "Android Studio"],
-        description: "A mobile fitness application designed to promote healthy habits by encouraging walking through personalized route suggestions and activity tracking. Built with Java for Android, the app connects to a custom Express.js API with MongoDB for user data management. It integrates the FatSecret API for nutrition tracking, allowing users to scan barcodes and log food items, while also connecting to OpenRouteService for AI-generated walking routes based on user location and desired distance. The app tracks calorie intake, walking progress, and provides dynamic route recommendations using OpenStreetMap for map rendering. Developed as a team project over the past month, with version control and collaboration managed through GitHub."
+        description: "A mobile fitness application designed to promote healthy habits by encouraging walking through personalized route suggestions and activity tracking. Built with Java for Android, the app connects to a custom Express.js API with MongoDB for user data management. It integrates the FatSecret API for nutrition tracking, allowing users to scan barcodes and log food items, while also connecting to OpenRouteService for AI-generated walking routes based on user location and desired distance. The app tracks calorie intake, walking progress, and provides dynamic route recommendations using OpenStreetMap for map rendering. Developed as a team project over the past month, with version control and collaboration managed through GitHub.",
+        url: "https://github.com/NolanS55/TicketVortex"
       },
       {
         title: "Movie Genie",
         image: movie,
         tags: ["Python", "Flask", "React", "NumPy", "AI Algorithms"],
-        description: "An AI-powered web application with a React frontend and Flask backend, developed to deliver intelligent recommendations through collaborative filtering algorithms. The machine learning models were implemented using NumPy, Pandas, and scikit-learn to provide personalized user experiences. RESTful API endpoints were built to handle data processing and serve model predictions, while the responsive and intuitive UI ensured seamless user interaction. The project followed Agile methodologies, with SCRUM, and GitHub used to support effective collaboration and iterative development."
+        description: "An AI-powered web application with a React frontend and Flask backend, developed to deliver intelligent recommendations through collaborative filtering algorithms. The machine learning models were implemented using NumPy, Pandas, and scikit-learn to provide personalized user experiences. RESTful API endpoints were built to handle data processing and serve model predictions, while the responsive and intuitive UI ensured seamless user interaction. The project followed Agile methodologies, with SCRUM, and GitHub used to support effective collaboration and iterative development.",
+        url: "https://github.com/NolanS55/TicketVortex"
       },
       
       {
         title: "Seneca oneScan",
         image: oneScan,
         tags: ["AdonisJS", "MongoDB", "OpenCV", "AI"],
-        description: "A web application that allows users to register by uploading photos of themselves, then uses AI-powered facial recognition to identify whether a similar-looking student exists in a database of uploaded images. Built with AdonisJS and MongoDB, the platform handles user authentication, image uploads, and real-time facial comparison. The AI system uses facial recognition algorithms to analyze and match submitted photos against stored student images. The project was developed collaboratively and managed using GitHub for version control and team coordination."
+        description: "A web application that allows users to register by uploading photos of themselves, then uses AI-powered facial recognition to identify whether a similar-looking student exists in a database of uploaded images. Built with AdonisJS and MongoDB, the platform handles user authentication, image uploads, and real-time facial comparison. The AI system uses facial recognition algorithms to analyze and match submitted photos against stored student images. The project was developed collaboratively and managed using GitHub for version control and team coordination.",
+        url: "https://github.com/NolanS55/TicketVortex"
       },
       {
         title: "Ticket Vortex",
         image: ticket,
         tags: ["Python", "Flask", "MongoDB"],
-        description: "An online marketplace for concert tickets built by a team with a focus on creating a seamless and secure user experience. The platform features RESTful APIs developed using Python and Flask, with a backend architecture designed to support key marketplace operations. The database was structured using MongoDB, with a custom schema designed to efficiently manage users, ticket listings, and transactions. The frontend was built with HTML, CSS, and Bootstrap to provide a responsive and intuitive interface. My contributions included designing and implementing the backend APIs, structuring the MongoDB database, and developing parts of the user interface. The project was managed collaboratively using GitHub, JIRA, and SCRUM for version control and workflow organization."
+        description: "An online marketplace for concert tickets built by a team with a focus on creating a seamless and secure user experience. The platform features RESTful APIs developed using Python and Flask, with a backend architecture designed to support key marketplace operations. The database was structured using MongoDB, with a custom schema designed to efficiently manage users, ticket listings, and transactions. The frontend was built with HTML, CSS, and Bootstrap to provide a responsive and intuitive interface. My contributions included designing and implementing the backend APIs, structuring the MongoDB database, and developing parts of the user interface. The project was managed collaboratively using GitHub, JIRA, and SCRUM for version control and workflow organization.",
+        url: "https://github.com/NolanS55/TicketVortex"
       }
     ]
 
@@ -199,7 +203,7 @@ const Portfolio = () => {
               ))}
             </div>
             <p className="description">{proj.description}</p>
-            <button className="btn">See More</button>
+            <button className="btn"><a href={proj.url}>See More</a></button>
           </div>
         </motion.div>
         ))}
