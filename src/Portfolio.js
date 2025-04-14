@@ -178,7 +178,6 @@ const Portfolio = () => {
       </section>
 
       {/* Projects Section Placeholder */}
-      <div className="purpleWave-img"><img src={skinnyWave} alt="dddd" className="purpleWave-img-back"></img></div>
       <section  className="projects-section">
       
       <div id="projects" className="project-wrapper">
