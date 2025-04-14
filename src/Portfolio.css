@@ -447,6 +447,20 @@ html, body {
     color: #000926;
   }
 
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  a:hover {
+    color: black; /* Tailwind purple-400 */
+  }
+
+  .project-buttons {
+    display: flex;
+    gap: 2.5rem;
+  }
+
   @media (max-width: 1480px) {
     .description {
       font-size: 1.1vw;
@@ -561,14 +575,7 @@ html, body {
     text-align: left;
   }
 
-  a {
-    text-decoration: none;
-    color: white;
-  }
-
-  a:hover {
-    color: black; /* Tailwind purple-400 */
-  }
+  
 
   @media (max-width: 1240px) {
     .about-section {
