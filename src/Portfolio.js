@@ -91,7 +91,7 @@ const Portfolio = () => {
         }
         else {
 
-            setCompanyName("HQ Meats")
+            setCompanyName("Local Business")
             setTitle("Web Developer")
             setDuration("June - September 2022");
             setItems(["Designed and implemented responsive websites using Webflow and custom HTML, CSS, and JavaScript, transforming business concepts into polished digital experiences.",
