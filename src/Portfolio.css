@@ -561,6 +561,15 @@ html, body {
     text-align: left;
   }
 
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  a:hover {
+    color: black; /* Tailwind purple-400 */
+  }
+
   @media (max-width: 1240px) {
     .about-section {
       padding: 0 1rem 2rem;

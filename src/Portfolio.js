@@ -38,14 +38,14 @@ const Portfolio = () => {
         image: walk,
         tags: ["ExpressJS", "NodeJS", "Java", "Android Studio"],
         description: "A mobile fitness application designed to promote healthy habits by encouraging walking through personalized route suggestions and activity tracking. Built with Java for Android, the app connects to a custom Express.js API with MongoDB for user data management. It integrates the FatSecret API for nutrition tracking, allowing users to scan barcodes and log food items, while also connecting to OpenRouteService for AI-generated walking routes based on user location and desired distance. The app tracks calorie intake, walking progress, and provides dynamic route recommendations using OpenStreetMap for map rendering. Developed as a team project over the past month, with version control and collaboration managed through GitHub.",
-        url: "https://github.com/NolanS55/TicketVortex"
+        url: "https://github.com/NolanS55/FitnessAppServer"
       },
       {
         title: "Movie Genie",
         image: movie,
         tags: ["Python", "Flask", "React", "NumPy", "AI Algorithms"],
         description: "An AI-powered web application with a React frontend and Flask backend, developed to deliver intelligent recommendations through collaborative filtering algorithms. The machine learning models were implemented using NumPy, Pandas, and scikit-learn to provide personalized user experiences. RESTful API endpoints were built to handle data processing and serve model predictions, while the responsive and intuitive UI ensured seamless user interaction. The project followed Agile methodologies, with SCRUM, and GitHub used to support effective collaboration and iterative development.",
-        url: "https://github.com/NolanS55/TicketVortex"
+        url: "https://github.com/NolanS55/Movie-Genie"
       },
       
       {
@@ -89,11 +89,12 @@ const Portfolio = () => {
             setCompanyName("HQ Meats")
             setTitle("Web Developer")
             setDuration("June - September 2022");
-            setItems(["Debugd MySQL queries and optimized PHP code to enhance server-side performance, contributing to sprint deliverables in an Agile environment.",
-                    "Developed and automated database tasks using Cron scripts, streamlining server-side operations, and reported progress in daily stand ups.",
-                    "Actively participated in Scrum meetings, including sprint planning, stand ups, and retrospectives, to ensure timely delivery of features and bug fixes.",
-                    "Collaborated with QA teams to create test cases, resolve bugs, and perform quality checks, utilizing Agile principles and the SDLC Waterfall model to ensure smooth project progression.",
-                    "Updated jQuery and JavaScript functions to improve client-side operations, with continuous feedback loops from sprint reviews to enhance user experience."
+            setItems(["Designed and implemented responsive websites using Webflow and custom HTML, CSS, and JavaScript, transforming business concepts into polished digital experiences.",
+  "Collaborated directly with investors and stakeholders to gather requirements, present design mockups via Figma, and incorporate feedback into the development process.",
+  "Attended regular client meetings to provide progress updates, align deliverables with business goals, and adjust timelines based on stakeholder input.",
+  "Enhanced site visibility through on-page SEO strategies, metadata optimization, and keyword-driven content structuring to improve search engine rankings.",
+  "Utilized Figma to create interactive design prototypes, ensuring alignment with brand identity and securing approval from investors before development.",
+  "Worked in a fast-paced, client-focused environment, balancing multiple priorities while delivering modern, user-friendly websites tailored to business needs."
             ])
             setTags(["JavaScript", "HTML/CSS", "SEO Optimization", "WebFlow", "Figma"])
             setFadeIn(prev => prev + 1);
@@ -203,7 +204,7 @@ const Portfolio = () => {
               ))}
             </div>
             <p className="description">{proj.description}</p>
-            <button className="btn"><a href={proj.url}>See More</a></button>
+            <button className="btn"><a href={proj.url} target="_blank" rel="noopener noreferrer">See More</a></button>
           </div>
         </motion.div>
         ))}
