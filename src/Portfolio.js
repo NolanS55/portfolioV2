@@ -8,9 +8,11 @@ import movie from "./movie.png"
 import oneScan from "./oneScan.png"
 import profile from "./profile.png"
 import ticket from "./ticketVortex.png"
+import drawModel from "./drawModel.png"
 import { TypeAnimation } from 'react-type-animation';
 import {m, motion} from 'framer-motion'
 import { desc } from "framer-motion/client";
+
 
 const Portfolio = () => {
 
@@ -37,8 +39,16 @@ const Portfolio = () => {
         title: "WalkMe",
         image: walk,
         tags: ["ExpressJS", "NodeJS", "Java", "Android Studio"],
-        description: "A mobile fitness application designed to promote healthy habits by encouraging walking through personalized route suggestions and activity tracking. Built with Java for Android, the app connects to a custom Express.js API with MongoDB for user data management. It integrates the FatSecret API for nutrition tracking, allowing users to scan barcodes and log food items, while also connecting to OpenRouteService for AI-generated walking routes based on user location and desired distance. The app tracks calorie intake, walking progress, and provides dynamic route recommendations using OpenStreetMap for map rendering. Developed as a team project over the past month, with version control and collaboration managed through GitHub.",
+        description: "A mobile fitness application designed to promote healthy habits by encouraging walking through personalized route suggestions and activity tracking. Built with Java for Android, the app connects to a custom Express.js API with MongoDB for user data management. It integrates the FatSecret API for nutrition tracking, allowing users to scan barcodes and log food items, while also connecting to OpenRouteService for AI-generated walking routes based on user location and desired distance. The app tracks calorie intake, walking progress, and provides dynamic route recommendations using OpenStreetMap for map rendering. Developed as a solo project over the past month, with version control and collaboration managed through GitHub.",
         url: "https://github.com/NolanS55/FitnessAppServer",
+        demoUrl: ""
+      },
+      {
+        title: "DrawModel",
+        image : drawModel,
+        tags: ["React", "FastAPI", "Three.js", "Azure OpenAI", "Python", "AI"],
+        description : "A full-stack web application that allows users to draw on a canvas, which is then analyzed by Azure OpenAI to generate corresponding Three.js code for rendering 3D models. The backend is powered by FastAPI, processing the user's drawings in real-time and converting them into 3D model data. The frontend features a dynamic, interactive drawing canvas where users can sketch their ideas, which are then transformed into 3D visualizations on the fly, offering a seamless and intuitive experience for creating 3D models directly from drawings.",
+        url: "https://github.com/NolanS55/DrawModel",
         demoUrl: ""
       },
       {
@@ -57,15 +67,6 @@ const Portfolio = () => {
         description: "A web application that allows users to register by uploading photos of themselves, then uses AI-powered facial recognition to identify whether a similar-looking student exists in a database of uploaded images. Built with AdonisJS and MongoDB, the platform handles user authentication, image uploads, and real-time facial comparison. The AI system uses facial recognition algorithms to analyze and match submitted photos against stored student images. The project was developed collaboratively and managed using GitHub for version control and team coordination.",
         url: "https://github.com/NolanS55/TicketVortex",
         demoUrl: ""
-      },
-      {
-        title: "Ticket Vortex",
-        image: ticket,
-        tags: ["Python", "Flask", "MongoDB"],
-        description: "An online marketplace for concert tickets built by a team with a focus on creating a seamless and secure user experience. The platform features RESTful APIs developed using Python and Flask, with a backend architecture designed to support key marketplace operations. The database was structured using MongoDB, with a custom schema designed to efficiently manage users, ticket listings, and transactions. The frontend was built with HTML, CSS, and Bootstrap to provide a responsive and intuitive interface. My contributions included designing and implementing the backend APIs, structuring the MongoDB database, and developing parts of the user interface. The project was managed collaboratively using GitHub, JIRA, and SCRUM for version control and workflow organization.",
-        url: "https://github.com/NolanS55/TicketVortex",
-        demoUrl: ""
-
       }
     ]
 
