@@ -410,7 +410,8 @@ html, body {
   .tag.seooptimization { background-color: #6DC75D; }
   .tag.webflow { background-color: #4AB6D8; }
   .tag.figma { background-color: #C27EFF; }
-
+  .tag.aws { background-color: #FF9C5A; }
+  .tag.docker { background-color: #4AB6D8; }
   .tag.expressjs { background-color: #3ABF91; }
   .tag.nodejs { background-color: #6DC75D; }
   .tag.java { background-color: #FF6B6B; }

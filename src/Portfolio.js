@@ -38,7 +38,7 @@ const Portfolio = () => {
       {
         title: "WalkMe",
         image: walk,
-        tags: ["ExpressJS", "NodeJS", "Java", "Android Studio"],
+        tags: ["ExpressJS", "NodeJS", "Java", "Android Studio", "AWS", "MongoDB", "Docker"],
         description: "A mobile fitness application designed to promote healthy habits by encouraging walking through personalized route suggestions and activity tracking. Built with Java for Android, the app connects to a custom Express.js API with MongoDB for user data management. It integrates the FatSecret API for nutrition tracking, allowing users to scan barcodes and log food items, while also connecting to OpenRouteService for AI-generated walking routes based on user location and desired distance. The app tracks calorie intake, walking progress, and provides dynamic route recommendations using OpenStreetMap for map rendering. Developed as a solo project over the past month, with version control and collaboration managed through GitHub.",
         url: "https://github.com/NolanS55/FitnessAppServer",
         demoUrl: ""
@@ -123,7 +123,6 @@ const Portfolio = () => {
         <a href="#experience" className="nav-link">Experience</a>
         <a href="#projects" className="nav-link">Projects</a>
         <a href="#about" className="nav-link">About Me</a>
-        <a href="#contact" className="nav-link">Contact</a>
       </nav>
 
       {/* Hero Section */}
