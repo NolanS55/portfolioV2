@@ -36,7 +36,7 @@ const Portfolio = () => {
     const projects = [
 
       {
-        title: "WalkMe",
+        title: "Walk About",
         image: walk,
         tags: ["ExpressJS", "NodeJS", "Java", "Android Studio", "AWS", "MongoDB", "Docker"],
         description: "A mobile fitness application designed to promote healthy habits by encouraging walking through personalized route suggestions and activity tracking. Built with Java for Android, the app connects to a custom Express.js API with MongoDB for user data management. It integrates the FatSecret API for nutrition tracking, allowing users to scan barcodes and log food items, while also connecting to OpenRouteService for AI-generated walking routes based on user location and desired distance. The app tracks calorie intake, walking progress, and provides dynamic route recommendations using OpenStreetMap for map rendering. Developed as a solo project over the past month, with version control and collaboration managed through GitHub.",
@@ -44,7 +44,7 @@ const Portfolio = () => {
         demoUrl: ""
       },
       {
-        title: "DrawModel",
+        title: "Sketch3D",
         image : drawModel,
         tags: ["React", "FastAPI", "Three.js", "Azure OpenAI", "Python", "AI"],
         description : "A full-stack web application that allows users to draw on a canvas, which is then analyzed by Azure OpenAI to generate corresponding Three.js code for rendering 3D models. The backend is powered by FastAPI, processing the user's drawings in real-time and converting them into 3D model data. The frontend features a dynamic, interactive drawing canvas where users can sketch their ideas, which are then transformed into 3D visualizations on the fly, offering a seamless and intuitive experience for creating 3D models directly from drawings.",
