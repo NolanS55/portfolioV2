@@ -18,7 +18,7 @@ const Portfolio = () => {
 
   // State variables for work experience and projects
     const [company_name, setCompanyName] = useState("TECHCOM");
-    const [title, setTitle] = useState("Full Stack Software Engineer Intern");
+    const [title, setTitle] = useState("Full Stack Software Developer Intern");
     const [duration, setDuration] = useState("May - August 2024");
     const [items, setItems] = useState(["Debugged MySQL queries and optimized PHP code to enhance server-side performance, contributing to sprint deliverables in an Agile environment.",
         "Developed and automated database tasks using Cron scripts, streamlining server-side operations, and reported progress in daily stand ups.",
